@@ -1,1 +1,1 @@
-# C-technical-programs-
+# leetcode-solutions
