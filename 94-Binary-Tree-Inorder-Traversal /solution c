@@ -1,0 +1,15 @@
+void inorderHelper(struct TreeNode* root, int* res, int* returnSize) {
+    if (root == NULL) {
+        return;
+    }
+    inorderHelper(root->left, res, returnSize);
+    res[(*returnSize)++] = root->val;
+    inorderHelper(root->right, res, returnSize);
+}
+
+int* inorderTraversal(struct TreeNode* root, int* returnSize) {
+    int* res = (int*)malloc(101 * sizeof(int));
+    *returnSize = 0;
+    inorderHelper(root, res, returnSize);
+    return res;
+}
